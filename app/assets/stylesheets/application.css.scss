@@ -1,0 +1,105 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.button_sing_up
+{
+
+position: absolute;
+  height: 200px;
+  width: 200px;
+  left: 750px;
+  top: 120px;
+  font-size: 280%;
+}
+.button_faq
+{
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  left: 500px;
+  top: 120px;
+  font-size: 280%;
+}
+.btn
+{
+  transition: 1s;
+  opacity: 0.7;
+}
+
+.btn:hover
+{
+  transition: 1s;
+  opacity: 1;
+}
+.button_sing_out
+{
+
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  left: 250px;
+  top: 120px;
+  font-size: 280%;
+}
+.button_donate
+{
+
+  position: absolute;
+  height: 100px;
+  width: 700px;
+  left: 250px;
+  top: 335px;
+  font-size: 280%;
+}
+.button_posts
+{
+
+  position: absolute;
+  height: 100px;
+  width: 700px;
+  left: 250px;
+  top: 450px;
+  font-size: 280%;
+}
+.field-user
+{
+  display: none;
+}
+
+.round-image-50 {
+  background-color: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  text-align: center;
+  img { width: 100% }
+}
+.reristration_form
+{
+  text-align: center;
+  position: fixed;
+  left: 40%;
+  top: 20%;
+}
+
+body{
+//  background-image: url(wbbg.jpg);
+  background-color: #E9FCFA;
+}
+
+.user_post_block {
+  float:left;
+}
+.description_post_block {
+  float:right;
+}
+.post_show {
+  background-color: #ffffff;
+  width: 270px;
+  border-style: solid;
+  word-wrap: break-word;
+}
