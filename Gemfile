@@ -31,15 +31,15 @@ gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'bootstrap-sass'
 gem 'sass-rails' ,'~> 5.0'
 # Use Capistrano for deployment
+gem 'byebug'
+gem "cancan"
+gem 'web-console', '~> 2.0'
+gem 'spring'
 # gem 'capistrano-rails', group: :development
 gem "paperclip" ,'~> 4.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-  gem "cancan"
-  gem 'omniauth-twitter'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
+
   gem 'sqlite3', '~> 1.3.10'
 end
 
