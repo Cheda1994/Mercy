@@ -18,7 +18,4 @@ $(document).ready(function(){
     $(".hi").click(function(){
         alert("This function is not yet ready, I'm working on it.");
     });
-    $(".button_faq").click(function(){
-        alert("This page is not yet ready, I'm working on it.");
-    });
 });

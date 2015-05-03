@@ -23,7 +23,7 @@ position: absolute;
 .btn
 {
   transition: 1s;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .btn:hover
@@ -87,8 +87,11 @@ position: absolute;
 }
 
 body{
-//  background-image: url(wbbg.jpg);
-  background-color: #E9FCFA;
+  background-image: url(wbbg.jpg);
+ // background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+
+  background-size: cover;
 }
 
 .user_post_block {

@@ -1,5 +1,5 @@
 <%= button_to @posts , posts_path , :method => :get, :class => 'button_posts btn btn-primary'  %>
-<button class="button_faq btn btn-default" >FAQ</button>
+<%= button_to 'FAQ', home_faq_path , :method => :get , :class => 'button_faq btn btn-default'%>
 <% if user_signed_in? %>
     <%= button_to 'Edit profile', edit_user_registration_path ,:method=> :get , :class => 'button_sing_up btn btn-default' %>
     <%= button_to 'Sing out', destroy_user_session_path , :method => :delete , :class => 'button_sing_out btn btn-default'%>
