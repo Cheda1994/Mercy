@@ -54,7 +54,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 #
 #   The path used after sign up.
   def after_sign_up_path_for(resource)
+    if user_signed_in?
+      email=User.find(current_user)
+      @email=email.email
+      Contact.new_user(@email).deliver
+    end
     super(resource)
+
   end
 #
 #   The path used after sign up for inactive accounts.
