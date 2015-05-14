@@ -6,7 +6,7 @@ gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -29,12 +29,14 @@ gem 'activeadmin', '~> 1.0.0.pre1'
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'bootstrap-sass'
-gem 'sass-rails' ,'~> 5.0'
+gem 'sass-rails' ,'~> 5.0.1'
 # Use Capistrano for deployment
+
 gem 'byebug'
 gem "cancan"
 gem 'web-console', '~> 2.0'
 gem 'spring'
+
 # gem 'capistrano-rails', group: :development
 gem "paperclip" ,'~> 4.1'
 group :development, :test do

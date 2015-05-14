@@ -1,4 +1,4 @@
-<%= button_to @posts , posts_path , :method => :get, :class => 'button_posts btn btn-primary'  %>
+<%= button_to "Posts and News", posts_path , :method => :get, :class => 'button_posts btn btn-primary'  %>
 <%= button_to 'FAQ', home_faq_path , :method => :get , :class => 'button_faq btn btn-default'%>
 <% if user_signed_in? %>
     <%= button_to 'Edit profile', edit_user_registration_path ,:method=> :get , :class => 'button_sing_up btn btn-default' %>

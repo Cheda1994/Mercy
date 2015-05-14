@@ -14,7 +14,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td>   <%=          post.email        %></td>
-        <td><h1><%= link_to post.title.capitalize , post %></h1>
+        <td><h1>Title: <%= link_to post.title.capitalize , post %></h1>
                 <%=         post.description  %></td>
       </tr>
     <% end %>
@@ -25,3 +25,6 @@
 <% if user_signed_in? %>
 <%= link_to 'New Post', new_post_path %>
 <%end%>
+<p>
+<%= link_to "Back" , root_path%>
+</p>
