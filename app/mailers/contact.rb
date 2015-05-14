@@ -1,5 +1,5 @@
 class Contact < ApplicationMailer
-  default from: "mercyfhruby@gmail.com"
+  default from: "chedster@gmail.com"
 
   def new_session
 

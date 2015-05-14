@@ -23,6 +23,19 @@ Rails.application.configure do
   config.active_record.migration_error = :page_load
 
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.active_record.raise_in_transactional_callbacks = true
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "mercyfromshadow.herokuapp.com",
+      :user_name            => "mercyfhruby@gmail.com",
+      :password             => "qweqweqwelfybr92",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+  }
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
