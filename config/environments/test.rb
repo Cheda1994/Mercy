@@ -37,6 +37,14 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :test
+    ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+        :login => "cheda1994_api1.gmail.com",
+        :password => "776M2RYTD8ERGKPE",
+        :signature => "AFcWxV21C7fd0v3bYYYRCpSSRl31A4Q8C65V1KFbLwhU7l7OtV40disR"
+    )
+  end
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
