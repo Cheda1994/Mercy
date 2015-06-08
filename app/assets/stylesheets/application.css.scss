@@ -103,13 +103,30 @@ background-size: 100% ;
   border-style: solid;
   word-wrap: break-word;
 }
-tbody :hover {
-  transition: 1s;
-
+.glyphicon{
+  visibility: hidden;
+  top: 35px;
+  right: 45px;
+  font-size: 140%;
 }
-tbody {
-  transition: 1s;
+tbody  {
+  tr:hover {
+    transition: 1s;
+    box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    .glyphicon {
+      visibility: visible;
+    }
+    td {
+      transition: 1s;
+      z-index: -1;
+      background-color: #b2ff58;
+    }
+  }
 }
+//tbody {
+//  transition: 1s;
+//}
 
 
 
