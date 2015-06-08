@@ -87,10 +87,10 @@ position: absolute;
   left: 40%;
   top: 20%;
 }
-body {
-background-image: url(NBG.jpg);
-background-size: 100% ;
-}
+//body {
+//background-image: url(NBG.jpg);
+//background-size: 100% ;
+//}
 .user_post_block {
   float:left;
 }
@@ -124,6 +124,15 @@ tbody  {
     }
   }
 }
+
+.span9 {
+  padding-top: 40px ;
+}
+
+.navbar-inner {
+  .container {
+  background-color: #9ef7ff;
+}}
 //tbody {
 //  transition: 1s;
 //}

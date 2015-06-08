@@ -1,6 +1,8 @@
 <div class="reristration_form post_show">
 <p>
+  <%if @avatar%>
   <%= image_tag(@avatar.avatar.url(:thumb)) %>
+      <%end%>
 </p>
 <p>
   <strong>Username:</strong>
