@@ -31,6 +31,7 @@ gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'bootstrap-sass'
 gem 'sass-rails' ,'~> 5.0.1'
 # Use Capistrano for deployment
+gem 'aws-s3'
 gem 'activemerchant'
 gem 'byebug'
 gem "cancan"

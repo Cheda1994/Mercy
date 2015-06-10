@@ -7,12 +7,12 @@ end
   def create
     @order=Order.new(order_params)
     @order.ip_address = request.remote_ip
-    if @order.save!
+
       if @order.purchase
         redirect_to "http://google.com"
       else
         redirect_to "http://noob-club.ru"
-      end
+
       end
     # else
     #   render :action => 'new'

@@ -61,17 +61,6 @@ ActiveRecord::Schema.define(version: 20150531181616) do
     t.datetime "updated_at",    null: false
   end
 
-  create_table "donates", force: :cascade do |t|
-    t.string   "new"
-    t.string   "ip_address"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "card_type"
-    t.date     "card_expires_on"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
   create_table "order_transactions", force: :cascade do |t|
     t.integer  "order_id"
     t.string   "action"
@@ -95,7 +84,6 @@ ActiveRecord::Schema.define(version: 20150531181616) do
     t.integer  "card_verification"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.integer  "card_number"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -105,11 +93,6 @@ ActiveRecord::Schema.define(version: 20150531181616) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "registrations", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

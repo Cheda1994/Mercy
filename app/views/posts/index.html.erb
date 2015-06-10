@@ -13,9 +13,11 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td>   <%=          post.email        %></td>
-        <td><h1>Title: <%= link_to post.title.capitalize , post %></h1>
-                <%=         post.description  %></td>
+        <td>            <%=          post.email        %>
+                        <% avatar = User.find(post.user_id )%>
+                        <p><%= image_tag(avatar.avatar.url(:thumb) ,:class => "round-image-50" )%></p></td>
+        <td><h1>Title:  <%= link_to post.title.capitalize , post %></h1>
+                        <%=         post.description  %></td>
         <td><%= link_to "", post , class:'glyphicon glyphicon-eye-open'%></td>
       </tr>
     <% end %>

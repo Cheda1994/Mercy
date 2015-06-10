@@ -32,7 +32,7 @@ class Order < ActiveRecord::Base
   def validate_card
     unless credit_card.valid?
       credit_card.errors.full_messages.each do |message|
-        errors.add_to_base message
+        errors[:base] << message
       end
     end
   end

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   devise_for :users , controllers: {
                         registrations: 'users/registrations'
                     }
-
+  get 'orders/fail'
   get 'home/index'
   get 'home/faq'
   get 'home/donate'
