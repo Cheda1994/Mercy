@@ -19,10 +19,13 @@
             <%= image_tag(current_user.avatar.url(:thumb), :class => "round-image-50") %>
         <% else %>
             <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %> |
-            <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+            <%= link_to "Login", nil , :class => 'navbar-link hi' %>
+
+<%= render "layouts/sing_in"%>
         <% end %>
         </div>
   </div>
+
 </div>
 
 <% if notice %>

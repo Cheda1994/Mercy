@@ -21,6 +21,7 @@
 <p>
 <%if user_signed_in? %>
 <% if @user.id == @post.user_id %>
+<%= link_to 'Delete' , @post , :method => :delete%>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%end%>
     <%end%>

@@ -1,0 +1,11 @@
+<div class="pull-right">
+  <div class="sing-in">
+    <%= form_for(:user, :url => session_path(:user)) do |f| %>
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true %>
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.submit "Log in" %>
+    <%end%>
+    </div>
+</div>
