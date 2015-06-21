@@ -8,7 +8,6 @@ class Order < ActiveRecord::Base
   def purchase
     response = GATEWAY.purchase(price_in_cents, credit_card, purchase_options)
     # transactions.create!(:action => "purchase", :amount => price_in_cents, :response => response)
-    # cart.update_attribute(:purchased_at, Time.now) if response.success?
     response.success?
   end
 
@@ -22,12 +21,12 @@ class Order < ActiveRecord::Base
     {
         :ip => ip_address,
         :billing_address => {
-            :name     => "Ryan Bates",
+            :name     => "Mercy",
             :address1 => "123 Main St.",
-            :city     => "New York",
-            :state    => "NY",
+            :city     => "Winterfell",
+            :state    => "Center",
             :country  => "US",
-            :zip      => "10001"
+            :zip      => "00000"
         }
     }
   end
