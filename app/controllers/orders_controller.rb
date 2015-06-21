@@ -4,26 +4,30 @@ def new
   @order =Order.new
 end
 
-  def create
-    @order=Order.new(order_params)
-    @order.ip_address = request.remote_ip
 
-      if @order.purchase
-        redirect_to "http://google.com"
-      else
-        redirect_to "http://noob-club.ru"
 
-      end
-    # else
-    #   render :action => 'new'
+def create
+  @order = Order.build_order(params[:order])
+  @order.ip_address = request.remote_ip
+  if @order.save
+    if @order.purchase
+      redirect_to "qweqw.com"
+    else
+      redirect_to "qwesqw.com"
     end
+  else
+    render :action => 'new'
+  end
+end
 
 
 
-  private
+
+
+private
 
     def order_params
-      params.require(:order).permit(:new, :cart_id, :ip_address, :first_name, :last_name, :card_type, :card_expires_on, :card_verification, :card_number)
+      params.require(:order).permit(:new, :order_id, :ip_address, :first_name, :last_name, :card_type, :card_expires_on, :card_verification, :card_number)
     end
 end
 
