@@ -37,7 +37,7 @@ gem 'byebug'
 gem "cancan"
 gem 'web-console', '~> 2.0'
 gem 'spring'
-
+gem 'geocoder'
 # gem 'capistrano-rails', group: :development
 gem "paperclip" ,'~> 4.1'
 group :development, :test do

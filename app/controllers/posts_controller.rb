@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    @ip_adress = request.location.country
   end
 
   # GET /posts/1
@@ -33,7 +34,7 @@ class PostsController < ApplicationController
     @post = @users.posts.new(post_params)
     respond_to do |format|
      @post.email=@users.email
-      @post.user_id=@users.id
+      @post.user_id = @users.id
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
