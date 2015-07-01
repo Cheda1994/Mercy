@@ -1,9 +1,10 @@
 <%= button_to "Posts and News", posts_path , :method => :get, :class => 'button_posts btn btn-primary'  %>
 <%= button_to 'FAQ', home_faq_path , :method => :get , :class => 'button_faq btn btn-default'%>
+<%= button_to 'Contact us', home_contact_us_path, :method => :get , :class => 'button_contact btn btn-default'%>
 <% if user_signed_in? %>
     <%= button_to 'Edit profile', edit_user_registration_path ,:method=> :get , :class => 'button_sing_up btn btn-default' %>
     <%= button_to 'Sing out', destroy_user_session_path , :method => :delete , :class => 'button_sing_out btn btn-default'%>
-    <%= button_to 'Donate' , nil , :class=>"button_donate btn btn-success hi"%>
+    <%= button_to 'Donate' , nil ,  :class=>"button_donate btn btn-success hi"%>
 <% else %>
     <%= button_to 'Sing up', new_user_registration_path , :method => :get , :class => 'button_sing_up btn btn-default'  %>
     <%= button_to 'Login',new_user_session_path , :method => :get , :class => 'button_sing_out btn btn btn-default' %>

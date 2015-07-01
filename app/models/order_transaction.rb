@@ -1,8 +1,9 @@
 class OrderTransaction < ActiveRecord::Base
-  # belongs_to :order
+  belongs_to :order
   serialize :params
 
   def response=(response)
+    self.order_id      = response.id
     self.success       = response.success?
     self.authorization = response.authorization
     self.message       = response.message

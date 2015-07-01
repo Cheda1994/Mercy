@@ -1,0 +1,10 @@
+<%= form_tag controller: "home" , action: "contact_us_form" , method: "post" ,html:{ :class => "reristration_form"} do  %>
+   <h1>Contact Us</h1>
+    <p>Email:<%= text_field_tag (:email)%></p>
+    <p>Title:<%= text_field_tag (:title)%></p>
+    <p>Description:</p>
+      <p><%= text_area_tag (:body) ,nil, size: "40x10"%></p>
+    <%= submit_tag "Send Us", controller: "home" , action: "contact_us_form" , method: "post"%>
+<% end %>
+<%= link_to "Home" , root_path %>
+
