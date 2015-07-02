@@ -18,7 +18,9 @@ class HomeController < ApplicationController
     @email = params[:email]
     @title = params[:title]
     @body = params[:body]
-    Contact.contact_us(@email,@body,@title).deliver_later
+    if Contact.contact_us(@email,@body,@title).deliver_later
+    Contact.conntact_unswer(@email).deliver_later
+    end
     redirect_to root_path
   end
 
