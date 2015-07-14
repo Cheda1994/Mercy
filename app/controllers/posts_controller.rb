@@ -5,7 +5,6 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
-    @ip_adress = request.location.country
   end
 
   # GET /posts/1

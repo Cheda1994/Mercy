@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'orders/fail'
   get 'home/index'
   get 'home/faq'
-  get 'home/donate'
+  post 'home/donate'
   get 'home/contact_us'
   post 'home/contact_us_form'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -17,7 +17,7 @@
                         <% avatar = User.find(post.user_id )%>
                         <p><%= image_tag(avatar.avatar.url(:thumb) ,:class => "round-image-50" )%></p></td>
         <td><h1>Title:  <%= link_to post.title.capitalize , post %></h1>
-                     <%= @ip_adress %>   <%=         post.description  %></td>
+                        <%=         post.description  %></td>
         <td><%= link_to "", post , class:'glyphicon glyphicon-eye-open'%></td>
       </tr>
     <% end %>

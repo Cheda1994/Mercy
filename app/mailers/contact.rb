@@ -15,7 +15,7 @@ class Contact < ApplicationMailer
   end
 
   def new_user(email)
-    default from: "chedster@gmail.com"
+    # default from: "chedster@gmail.com"
     @email=email
     mail(to: "#{@email}" , subject: "Welcome to MFH")
   end

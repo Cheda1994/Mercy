@@ -8,7 +8,12 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+attr_readonly :x
 
-
+def self.online
+ online = where("current_sign_in_at > ?" , 15.minutes.ago)
+ online = online.to_a
+  online.map{|d| d.email}
+end
 
 end
